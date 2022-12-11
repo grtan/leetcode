@@ -37,6 +37,20 @@ function genBinaryTree(deep = 5) {
   return root
 }
 
+// 生成完全满二叉树的数组表示
+function genBinaryTreeArray(deep = 5) {
+  let total = 0
+  const tree = []
+
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < Math.pow(2, i); j++) {
+      tree.push(`${i}-${j}`)
+    }
+  }
+
+  return tree
+}
+
 module.exports = {
   genBinaryTree
 }
